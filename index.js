@@ -17,6 +17,7 @@ const connectDbAndCreateServer=async()=>{
         });
     }catch(e){
         console.log(`Database Error ${e.message}`);
+        process.exitCode(1);
     }finally{
         console.log("connectDbAndCreateServer() Function Execetued");
     }
